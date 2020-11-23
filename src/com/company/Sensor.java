@@ -1,5 +1,6 @@
 package com.company;
 
+
 public class Sensor extends Unit {
     private double SensorValue;
     private String room;
