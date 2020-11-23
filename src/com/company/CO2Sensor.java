@@ -1,4 +1,4 @@
-package src.com.company;
+package com.company;
 
 public class CO2Sensor extends Sensor {
     private double co2Value;

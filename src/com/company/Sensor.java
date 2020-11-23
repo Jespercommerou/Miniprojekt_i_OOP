@@ -1,10 +1,11 @@
-package src.com.company;
+package com.company;
 
-public class Sensor {
+public class Sensor extends Unit {
     private double SensorValue;
     private String room;
 
-    public Sensor(String room) {
+    public Sensor(String name, String room) {
+        super(name);
         this.room = room;
     }
 
