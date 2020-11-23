@@ -9,12 +9,11 @@ public class Building extends Unit{
     private ArrayList<Actuator> actuatorList;
     private ArrayList<String> roomList;
 
-    public Building (ArrayList<Sensor> sensorList, ArrayList<Actuator> actuatorList,
-                              ArrayList<String> roomList, String name){
+    public Building (String name){
         super(name);
-        this.sensorList = sensorList;
-        this.actuatorList =actuatorList;
-        this.roomList = roomList;
+        ArrayList<Sensor> sensorList = new ArrayList<Sensor>();
+        ArrayList<Actuator> actuatorList = new ArrayList<Actuator>();
+        ArrayList<String> roomList = new ArrayList<String>();
     }
 
 
