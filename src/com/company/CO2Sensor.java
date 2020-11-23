@@ -3,9 +3,13 @@ package com.company;
 public class CO2Sensor extends Sensor {
     private double co2Value;
 
+    public CO2Sensor (String room, String name) {
+        super(room,name);
+    }
+
     @Override
-    public double getSensorValue() {
-        return super.getSensorValue();
+    public double getSensorValue(String room) {
+        return super.getSensorValue(room);
     }
 
     @Override
