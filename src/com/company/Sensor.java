@@ -12,4 +12,8 @@ public class Sensor extends Unit {
     public double getSensorValue(String room) {
         return SensorValue;
     }
+
+    public String getRoom() {
+        return room;
+    }
 }
