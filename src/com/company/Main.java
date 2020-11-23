@@ -7,14 +7,28 @@ public class Main {
 
         system.addBuilding("MMMI");
 
-        System.out.println(system.buildingList.get(0).getName());
+        Building MMMI = system.buildingList.get(0);
 
-        system.buildingList.get(0).addTempSensor("Studierum", "TempSensor");
-        system.buildingList.get(0).addCO2Sensor("Studierum 2", "Temp sensor");
-        system.buildingList.get(0).addActuator(20, "Ventilationsaktuator");
+        System.out.println(MMMI.getName());
 
-        system.buildingList.get(0).showSensor();
-        system.buildingList.get(0).showActuators();
+        MMMI.addTempSensor("Studierum", "TempSensor");
+        MMMI.addCO2Sensor("Studierum 2", "Temp sensor");
+        MMMI.addActuator(20, "Ventilationsaktuator");
 
+        MMMI.showSensor();
+        MMMI.showActuators();
+
+        MMMI.removeSensor("TempSensor");
+
+        Actuator vent = MMMI.actuatorList.get(0);
+
+        vent.setActuatorValue(10);
+
+        System.out.println(vent.getActuatorValue());
+
+
+        system.showBuildings();
+
+        System.out.println(MMMI.sensorList.get(0).getSensorValue("TempSensor"));
     }
 }

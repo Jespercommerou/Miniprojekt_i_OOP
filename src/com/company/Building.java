@@ -5,15 +5,15 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class Building extends Unit{
-    private ArrayList<Sensor> sensorList;
-    private ArrayList<Actuator> actuatorList;
-    private ArrayList<String> roomList;
+    ArrayList<Sensor> sensorList;
+    ArrayList<Actuator> actuatorList;
+    ArrayList<String> roomList;
 
     public Building (String name){
         super(name);
-        ArrayList<Sensor> sensorList = new ArrayList<Sensor>();
-        ArrayList<Actuator> actuatorList = new ArrayList<Actuator>();
-        ArrayList<String> roomList = new ArrayList<String>();
+        sensorList = new ArrayList<Sensor>();
+        actuatorList = new ArrayList<Actuator>();
+        roomList = new ArrayList<String>();
     }
 
 
