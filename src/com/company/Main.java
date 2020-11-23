@@ -15,6 +15,7 @@ public class Main {
         MMMI.addCO2Sensor("Studierum 2", "Temp sensor");
         MMMI.addActuator(20, "Ventilationsaktuator");
 
+
         MMMI.showSensor();
         MMMI.showActuators();
 
