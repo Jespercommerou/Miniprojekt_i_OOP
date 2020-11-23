@@ -1,17 +1,25 @@
 package com.company;
 
-public class Actuator
+public class Actuator extends Unit
 {
     private String room;
     private double actuatorValue;
-
-    Actuator(double actuatorValue, String room)
+    Actuator(String name, String room, double actuatorValue)
     {
+        super(name);
+        this.room = room;
+        this.actuatorValue = actuatorValue;
+    }
+
+    Actuator(double actuatorValue, String room, String name)
+    {
+        super(name);
         this.actuatorValue = actuatorValue;
         this.room = room;
     }
-    Actuator(double actuatorValue)
+    Actuator(double actuatorValue, String name)
     {
+        super(name);
         this.actuatorValue = actuatorValue;
     }
 
