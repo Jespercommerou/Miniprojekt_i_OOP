@@ -1,5 +1,10 @@
 package src.com.company;
 
 public class Sensor {
-    // tester lige her
+    private double SensorValue;
+    private String room;
+
+    public double getSensorValue() {
+        return SensorValue;
+    }
 }
