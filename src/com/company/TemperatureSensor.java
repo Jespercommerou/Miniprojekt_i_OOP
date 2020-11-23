@@ -5,7 +5,6 @@ public class TemperatureSensor extends Sensor {
 
     public TemperatureSensor (String room, String name) {
         super(room, name);
-
     }
 
     public double getSensorValue() {

@@ -1,15 +1,11 @@
 package com.company;
 
-public class Sensor extends Unit {
+public class Sensor {
     private double SensorValue;
     private String room;
 
-    public Sensor(String name, String room) {
-        super(name);
-        this.room = room;
-    }
-
-    public double getSensorValue(String room) {
+    public double getSensorValue()
+    {
         return SensorValue;
     }
 }
