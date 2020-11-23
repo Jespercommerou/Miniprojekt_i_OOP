@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.UUID;
 
-public abstract class Unit {
+public class Unit {
     private String name;
     private UUID id;
 
