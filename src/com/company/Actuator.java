@@ -32,4 +32,8 @@ public class Actuator extends Unit
     {
         return actuatorValue;
     }
+
+    public String getRoom() {
+        return room;
+    }
 }
