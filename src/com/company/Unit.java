@@ -6,7 +6,7 @@ public abstract class Unit {
     private String name;
     private UUID id;
 
-    Unit(String name){
+    public Unit(String name){
         this.name = name;
         this.id = UUID.randomUUID();
     }
