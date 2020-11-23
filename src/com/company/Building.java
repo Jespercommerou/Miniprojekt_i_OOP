@@ -30,6 +30,13 @@ public class Building extends Unit{
             }
         }
     }
+    public void removeActuator(UUID id){
+        for (Actuator actuator : actuatorList){
+            if(id == actuator.getId()){
+                actuatorList.remove(actuator);
+            }
+        }
+    }
     public void addCO2Sensor (String room, String name){
         CO2Sensor co2Sensor = new CO2Sensor(room, name);
         sensorList.add(co2Sensor);
@@ -77,6 +84,7 @@ public class Building extends Unit{
             }
         }
     }
+
 
 
 
