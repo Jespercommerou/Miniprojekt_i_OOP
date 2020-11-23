@@ -24,18 +24,10 @@ public class Building extends Unit{
     }
 
     public void removeActuator(String room){
-        for (Actuator actuator : actuatorList){
-            if (room == actuator.getName()) {
-                actuatorList.remove(actuator);
-            }
-        }
+        actuatorList.removeIf(actuator -> room == actuator.getName());
     }
     public void removeActuator(UUID id){
-        for (Actuator actuator : actuatorList){
-            if(id == actuator.getId()){
-                actuatorList.remove(actuator);
-            }
-        }
+        actuatorList.removeIf(actuator -> id == actuator.getId());
     }
     public void addCO2Sensor (String room, String name){
         CO2Sensor co2Sensor = new CO2Sensor(room, name);
@@ -46,19 +38,11 @@ public class Building extends Unit{
         sensorList.add(temperatureSensor);
     }
     public void removeSensor (String name){
-        for (Sensor sensor: sensorList){
-            if (name== sensor.getName()){
-                sensorList.remove(sensor);
-            }
-        }
+        sensorList.removeIf(sensor -> name == sensor.getName());
     }
 
     public void removeSensor (UUID id){
-        for (Sensor sensor: sensorList){
-            if (id == sensor.getId()){
-                sensorList.remove(sensor);
-            }
-        }
+        sensorList.removeIf(sensor -> id == sensor.getId());
     }
     public void showActuators(String name){
         for (Actuator actuator : actuatorList){

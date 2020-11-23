@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class MainSystem {
-    private ArrayList<Building> buildingList;
+    public ArrayList<Building> buildingList;
 
     MainSystem(){
         buildingList = new ArrayList<Building>();
@@ -15,19 +15,11 @@ public class MainSystem {
     }
 
     public void removeBuilding(UUID id){
-        for(Building building : buildingList){
-            if(building.getId()==id){
-                buildingList.remove(building);
-            }
-        }
+        buildingList.removeIf(building -> building.getId() == id);
     }
 
     public void removeBuilding(String name){
-        for(Building building : buildingList){
-            if(building.getName()==name){
-                buildingList.remove(building);
-            }
-        }
+        buildingList.removeIf(building -> building.getName() == name);
     }
 
     public void showBuildings(){
